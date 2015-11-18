@@ -17,6 +17,7 @@
 #import "Runtime.h"
 #import "MediaCollectionViewCell.h"
 #import "HeaderSectionCollectionReusableView.h"
+#import "LoadingView.h"
 /*============================================================================
  PRIVATE CONSTANTS
  =============================================================================*/
@@ -30,6 +31,7 @@
 // views
 @property (weak, nonatomic) IBOutlet UICollectionView *mediasCollectionView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (strong, nonatomic) ASMediaFocusManager *mediaFocusManager;
 
 // data
@@ -77,13 +79,19 @@
 - (void)initData{
     self.medias = [NSMutableArray new];
     
-    // load Instagram feed if already logged in.
-    if ([Runtime sharedRuntime].instagramToken) {
-        [self loadInstagramFeeds];
-    }
 }
 
 - (void)setUpUI{
+    // load Instagram feed if already logged in.
+    if ([Runtime sharedRuntime].instagramToken) {
+        self.loginButton.hidden = YES;
+        self.mediasCollectionView.hidden = NO;
+        [self refresh];
+    }else{
+        self.loginButton.hidden = NO;
+        self.mediasCollectionView.hidden = YES;
+    }
+    
     // colapse navigation bar when scrolling up
     [self followScrollView:self.mediasCollectionView usingTopConstraint:self.topConstraint];
     
@@ -112,12 +120,14 @@
             [self.medias addObjectsFromArray:media];
             
             dispatch_async(dispatch_get_main_queue(), ^{
+                [[LoadingView sharedInstance] stopLoading];
                 [self.mediasCollectionView.pullToRefreshView stopAnimating];
                 [self.mediasCollectionView.infiniteScrollingView stopAnimating];
                 [self.mediasCollectionView reloadData];
             });
             
         } failure:^(NSError *error) {
+            [[LoadingView sharedInstance] stopLoading];
             [self handlerError:error];
         }];
     
@@ -128,6 +138,8 @@
     [self.medias removeAllObjects];
     [self.mediasCollectionView reloadData];
     self.mediasCollectionView.infiniteScrollingView.enabled = YES;
+    
+    [[LoadingView sharedInstance] startLoading];
     [self loadInstagramFeeds];
 }
 
@@ -157,7 +169,10 @@
     [cell displayMedia:media];
     
     cell.photoImageView.tag = indexPath.section;
-    [self.mediaFocusManager installOnView:cell.photoImageView];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.mediaFocusManager installOnView:cell.photoImageView];
+    });
+    
     
     return cell;
 }
@@ -204,7 +219,9 @@
         if (!error) {
             // save Instagram toke
             [Runtime sharedRuntime].instagramToken = [InstagramEngine sharedEngine].accessToken;
-            [self loadInstagramFeeds];
+            self.mediasCollectionView.hidden = NO;
+            self.loginButton.hidden = YES;
+            [self refresh];
         }else {
             [self handlerError:error];
         }

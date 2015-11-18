@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3C4C849AAABAF57BF8F51FEA /* libPods-InstagramFeeds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF09FE27F78D09C1526E7BA5 /* libPods-InstagramFeeds.a */; };
+		509E4B8C1BFCD90600E79F77 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 509E4B8B1BFCD90600E79F77 /* LoadingView.m */; };
+		509E4B8E1BFCD91300E79F77 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 509E4B8D1BFCD91300E79F77 /* LoadingView.xib */; };
 		50D47E7D1BFC09A70018DC51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47E7C1BFC09A70018DC51 /* main.m */; };
 		50D47E801BFC09A70018DC51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47E7F1BFC09A70018DC51 /* AppDelegate.m */; };
 		50D47E961BFC09A70018DC51 /* InstagramFeedsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47E951BFC09A70018DC51 /* InstagramFeedsTests.m */; };
@@ -47,6 +49,9 @@
 
 /* Begin PBXFileReference section */
 		382407E99C5F19C0A324F4C3 /* Pods-InstagramFeeds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFeeds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramFeeds/Pods-InstagramFeeds.debug.xcconfig"; sourceTree = "<group>"; };
+		509E4B8A1BFCD90600E79F77 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		509E4B8B1BFCD90600E79F77 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
+		509E4B8D1BFCD91300E79F77 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		50D47E781BFC09A70018DC51 /* InstagramFeeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFeeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D47E7C1BFC09A70018DC51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50D47E7E1BFC09A70018DC51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -112,6 +117,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		509E4B891BFCD8A500E79F77 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				509E4B8A1BFCD90600E79F77 /* LoadingView.h */,
+				509E4B8B1BFCD90600E79F77 /* LoadingView.m */,
+				509E4B8D1BFCD91300E79F77 /* LoadingView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		50D47E6F1BFC09A70018DC51 = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +247,7 @@
 		50D47EB91BFC0C050018DC51 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				509E4B891BFCD8A500E79F77 /* Views */,
 				50D47EC91BFC10E00018DC51 /* Runtime.h */,
 				50D47ECA1BFC10E00018DC51 /* Runtime.m */,
 				50D47EDF1BFC47340018DC51 /* Utils.h */,
@@ -417,6 +433,7 @@
 				50D47EDB1BFC40AF0018DC51 /* billabong.ttf in Resources */,
 				50D47EBE1BFC0C050018DC51 /* LaunchScreen.storyboard in Resources */,
 				50D47EBD1BFC0C050018DC51 /* InstagramKit.plist in Resources */,
+				509E4B8E1BFCD91300E79F77 /* LoadingView.xib in Resources */,
 				50D47EBC1BFC0C050018DC51 /* Assets.xcassets in Resources */,
 				50D47EBF1BFC0C050018DC51 /* Main.storyboard in Resources */,
 			);
@@ -492,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50D47EDE1BFC43770018DC51 /* HeaderSectionCollectionReusableView.m in Sources */,
+				509E4B8C1BFCD90600E79F77 /* LoadingView.m in Sources */,
 				50D47EC81BFC0DAF0018DC51 /* PopularFeedsViewController.m in Sources */,
 				50D47ED01BFC28320018DC51 /* MediaCollectionViewCell.m in Sources */,
 				50D47EE11BFC47340018DC51 /* Utils.m in Sources */,
