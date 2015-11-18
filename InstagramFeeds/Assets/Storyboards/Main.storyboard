@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dg1-yx-kvo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dg1-yx-kvo">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--Instagram Popular-->
@@ -71,16 +71,13 @@
                                                         <action selector="didTouchedOnRepostButton:" destination="fRm-OS-v1T" eventType="touchUpInside" id="hfu-ed-SyS"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5V-XV-LXq">
+                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5V-XV-LXq">
                                                     <rect key="frame" x="0.0" y="0.0" width="599" height="140"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <state key="normal" image="ic_play">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <connections>
-                                                        <action selector="didTouchedOnPlayButton:" destination="fRm-OS-v1T" eventType="touchUpInside" id="Ve7-ZX-vZT"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -179,7 +176,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ji5-0g-vMI">
-                                            <rect key="frame" x="55" y="5" width="35.5" height="16"/>
+                                            <rect key="frame" x="55" y="5" width="535" height="16"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -198,6 +195,7 @@
                                         <constraint firstItem="7sM-fO-lqv" firstAttribute="leading" secondItem="wzT-RC-LtB" secondAttribute="leading" constant="10" id="FqD-yg-FQ7"/>
                                         <constraint firstItem="rfC-Dd-a8j" firstAttribute="leading" secondItem="ji5-0g-vMI" secondAttribute="leading" id="IcR-fh-hQh"/>
                                         <constraint firstItem="ji5-0g-vMI" firstAttribute="top" secondItem="7sM-fO-lqv" secondAttribute="top" id="LZj-ag-V7r"/>
+                                        <constraint firstAttribute="trailing" secondItem="ji5-0g-vMI" secondAttribute="trailing" constant="10" id="dM5-Ks-zZd"/>
                                         <constraint firstItem="ji5-0g-vMI" firstAttribute="leading" secondItem="7sM-fO-lqv" secondAttribute="trailing" constant="5" id="vbJ-RW-3WK"/>
                                     </constraints>
                                     <connections>

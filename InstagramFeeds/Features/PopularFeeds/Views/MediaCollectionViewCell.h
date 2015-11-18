@@ -19,5 +19,6 @@
  =============================================================================*/
 @class InstagramMedia;
 @interface MediaCollectionViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 - (void)displayMedia:(InstagramMedia*)media;
 @end

@@ -21,10 +21,8 @@
  =============================================================================*/
 
 @interface MediaCollectionViewCell ()
-@property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *captionLabel;
 
-- (IBAction)didTouchedOnPlayButton:(UIButton *)sender;
 @end
 
 @implementation MediaCollectionViewCell
@@ -74,7 +72,5 @@
         [appDelegate.window.rootViewController presentViewController:alert animated:YES completion:nil];
     }
     
-}
-- (IBAction)didTouchedOnPlayButton:(UIButton *)sender {
 }
 @end

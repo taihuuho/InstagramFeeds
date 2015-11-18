@@ -8,6 +8,7 @@ pod 'InstagramKit'
 pod 'SVPullToRefresh'
 pod 'SDWebImage'
 pod 'AMScrollingNavbar', '1.5.1'
+pod 'ASMediaFocusManager', '0.5'
 end
 
 target 'InstagramFeedsTests' do

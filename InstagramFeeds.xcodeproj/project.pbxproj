@@ -12,20 +12,20 @@
 		50D47E801BFC09A70018DC51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47E7F1BFC09A70018DC51 /* AppDelegate.m */; };
 		50D47E961BFC09A70018DC51 /* InstagramFeedsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47E951BFC09A70018DC51 /* InstagramFeedsTests.m */; };
 		50D47EA11BFC09A70018DC51 /* InstagramFeedsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47EA01BFC09A70018DC51 /* InstagramFeedsUITests.m */; };
-		50D47EBC1BFC0C050018DC51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D47EAF1BFC0C050018DC51 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		50D47EBD1BFC0C050018DC51 /* InstagramKit.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50D47EB31BFC0C050018DC51 /* InstagramKit.plist */; settings = {ASSET_TAGS = (); }; };
-		50D47EBE1BFC0C050018DC51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D47EB51BFC0C050018DC51 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		50D47EBF1BFC0C050018DC51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D47EB61BFC0C050018DC51 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		50D47EC21BFC0D2B0018DC51 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47EC11BFC0D2B0018DC51 /* BaseViewController.m */; settings = {ASSET_TAGS = (); }; };
-		50D47EC81BFC0DAF0018DC51 /* PopularFeedsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47EC71BFC0DAF0018DC51 /* PopularFeedsViewController.m */; settings = {ASSET_TAGS = (); }; };
-		50D47ECB1BFC10E00018DC51 /* Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47ECA1BFC10E00018DC51 /* Runtime.m */; settings = {ASSET_TAGS = (); }; };
-		50D47ED01BFC28320018DC51 /* MediaCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47ECF1BFC28320018DC51 /* MediaCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		50D47ED31BFC3E8F0018DC51 /* UIColor+AppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47ED21BFC3E8F0018DC51 /* UIColor+AppColor.m */; settings = {ASSET_TAGS = (); }; };
-		50D47ED91BFC3FF80018DC51 /* UIFont+AppFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47ED81BFC3FF80018DC51 /* UIFont+AppFont.m */; settings = {ASSET_TAGS = (); }; };
-		50D47EDB1BFC40AF0018DC51 /* billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50D47EDA1BFC40AF0018DC51 /* billabong.ttf */; settings = {ASSET_TAGS = (); }; };
-		50D47EDE1BFC43770018DC51 /* HeaderSectionCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47EDD1BFC43770018DC51 /* HeaderSectionCollectionReusableView.m */; settings = {ASSET_TAGS = (); }; };
-		50D47EE11BFC47340018DC51 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47EE01BFC47340018DC51 /* Utils.m */; settings = {ASSET_TAGS = (); }; };
-		50D47EE41BFC499D0018DC51 /* StickyCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47EE31BFC499D0018DC51 /* StickyCollectionViewFlowLayout.m */; settings = {ASSET_TAGS = (); }; };
+		50D47EBC1BFC0C050018DC51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D47EAF1BFC0C050018DC51 /* Assets.xcassets */; };
+		50D47EBD1BFC0C050018DC51 /* InstagramKit.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50D47EB31BFC0C050018DC51 /* InstagramKit.plist */; };
+		50D47EBE1BFC0C050018DC51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D47EB51BFC0C050018DC51 /* LaunchScreen.storyboard */; };
+		50D47EBF1BFC0C050018DC51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D47EB61BFC0C050018DC51 /* Main.storyboard */; };
+		50D47EC21BFC0D2B0018DC51 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47EC11BFC0D2B0018DC51 /* BaseViewController.m */; };
+		50D47EC81BFC0DAF0018DC51 /* PopularFeedsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47EC71BFC0DAF0018DC51 /* PopularFeedsViewController.m */; };
+		50D47ECB1BFC10E00018DC51 /* Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47ECA1BFC10E00018DC51 /* Runtime.m */; };
+		50D47ED01BFC28320018DC51 /* MediaCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47ECF1BFC28320018DC51 /* MediaCollectionViewCell.m */; };
+		50D47ED31BFC3E8F0018DC51 /* UIColor+AppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47ED21BFC3E8F0018DC51 /* UIColor+AppColor.m */; };
+		50D47ED91BFC3FF80018DC51 /* UIFont+AppFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47ED81BFC3FF80018DC51 /* UIFont+AppFont.m */; };
+		50D47EDB1BFC40AF0018DC51 /* billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50D47EDA1BFC40AF0018DC51 /* billabong.ttf */; };
+		50D47EDE1BFC43770018DC51 /* HeaderSectionCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47EDD1BFC43770018DC51 /* HeaderSectionCollectionReusableView.m */; };
+		50D47EE11BFC47340018DC51 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47EE01BFC47340018DC51 /* Utils.m */; };
+		50D47EE41BFC499D0018DC51 /* StickyCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D47EE31BFC499D0018DC51 /* StickyCollectionViewFlowLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */

@@ -12,6 +12,7 @@
 #import <InstagramKit/InstagramKit.h>
 #import <SVPullToRefresh/SVPullToRefresh.h>
 #import <AMScrollingNavbar/UIViewController+ScrollingNavbar.h>
+#import <ASMediaFocusManager/ASMediaFocusManager.h>
 
 #import "Runtime.h"
 #import "MediaCollectionViewCell.h"
@@ -24,11 +25,12 @@
  PRIVATE INTERFACE
  =============================================================================*/
 
-@interface PopularFeedsViewController ()
+@interface PopularFeedsViewController ()<ASMediasFocusDelegate>
 
 // views
 @property (weak, nonatomic) IBOutlet UICollectionView *mediasCollectionView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
+@property (strong, nonatomic) ASMediaFocusManager *mediaFocusManager;
 
 // data
 @property (nonatomic)   NSMutableArray *medias;
@@ -52,6 +54,11 @@
 @end
 
 @implementation PopularFeedsViewController
+
+- (void)dealloc{
+    [self setMedias:nil];
+    [self setMediaFocusManager:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -90,11 +97,16 @@
     [self.mediasCollectionView addInfiniteScrollingWithActionHandler:^{
         [self loadMore];
     }];
+    
+    self.mediaFocusManager = [[ASMediaFocusManager alloc] init];
+    self.mediaFocusManager.delegate = self;
+    self.mediaFocusManager.elasticAnimation = YES;
+    self.mediaFocusManager.defocusOnVerticalSwipe = YES;
+    
 }
 
 - (void)loadInstagramFeeds{
     
-        __weak typeof(self) weakSelf = self;
         [[InstagramEngine sharedEngine] getPopularMediaWithSuccess:^(NSArray *media, InstagramPaginationInfo *paginationInfo) {
             
             [self.medias addObjectsFromArray:media];
@@ -106,7 +118,7 @@
             });
             
         } failure:^(NSError *error) {
-            [weakSelf handlerError:error];
+            [self handlerError:error];
         }];
     
 }
@@ -142,7 +154,10 @@
     }
     
     MediaCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-    [cell displayMedia:self.medias[indexPath.section]];
+    [cell displayMedia:media];
+    
+    cell.photoImageView.tag = indexPath.section;
+    [self.mediaFocusManager installOnView:cell.photoImageView];
     
     return cell;
 }
@@ -162,7 +177,25 @@
 
 #pragma mark UICollectionFlowLayoutDelegate
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
     return CGSizeMake(collectionView.frame.size.width, collectionView.frame.size.width + 50); // 5 top padding + 40 height of caption + 5 bottom padding
+}
+
+#pragma mark - ASMediaFocusDelegate
+- (UIViewController *)parentViewControllerForMediaFocusManager:(ASMediaFocusManager *)mediaFocusManager
+{
+    return self.navigationController;
+}
+- (NSURL *)mediaFocusManager:(ASMediaFocusManager *)mediaFocusManager mediaURLForView:(UIView *)view
+{
+    InstagramMedia *media = self.medias[view.tag];
+    return media.isVideo ? media.standardResolutionVideoURL : media.standardResolutionImageURL;
+}
+
+- (NSString *)mediaFocusManager:(ASMediaFocusManager *)mediaFocusManager titleForView:(UIView *)view;
+{
+    InstagramMedia *media = self.medias[view.tag];
+    return media.caption.text;
 }
 
 #pragma mark IBActions

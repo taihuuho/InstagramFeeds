@@ -21,6 +21,9 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - AMScrollingNavbar (1.5.1)
+  - ASBPlayerScrubbing (0.1)
+  - ASMediaFocusManager (0.5):
+    - ASBPlayerScrubbing (~> 0.1)
   - InstagramKit (3.5.0):
     - AFNetworking (~> 2.0)
   - SDWebImage (3.7.3):
@@ -30,6 +33,7 @@ PODS:
 
 DEPENDENCIES:
   - AMScrollingNavbar (= 1.5.1)
+  - ASMediaFocusManager (= 0.5)
   - InstagramKit
   - SDWebImage
   - SVPullToRefresh
@@ -37,6 +41,8 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   AMScrollingNavbar: 767ed2db60d927a809bddff5d01b739b7020b12b
+  ASBPlayerScrubbing: 0fc5e76aad6fdbcf14380734fb7f2c127cd28b66
+  ASMediaFocusManager: 5a071038ada1a79abf9d0c95b6b2b1c1e5cd3a87
   InstagramKit: 32fe78c44f41701825ac567343fb2b682c6e3d02
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c

@@ -14,6 +14,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ASBPlayerScrubbing.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ASMediaFocusManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>InstagramKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,7 +47,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>15490630A064CB29D1FE5044762997E2</key>
+		<key>07E60D4C5E98D6C52A478A1C1A5EEC37</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0D590B8C17D024653CA3A0FDA52381DF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,17 +62,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>51219BF80C2141D57407D206D895962B</key>
+		<key>63D20D4D3B5FD3E9861E23234E0A6181</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A6F8B3A92F00394F09DF043549969823</key>
+		<key>9BE8955D26D7656DDEFFF2A6C714D16F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>AB804E76BF7499ACB44C90121624E8BC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B44A6DB2A4FF85A5FA0819885FA26470</key>
 		<dict>
 			<key>primary</key>
 			<true/>
