@@ -38,7 +38,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MediaCollectionViewCell" id="fRm-OS-v1T" customClass="MediaCollectionViewCell">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VideoCollectionViewCell" id="fRm-OS-v1T" customClass="MediaCollectionViewCell">
                                         <rect key="frame" x="0.5" y="50" width="599" height="190"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -71,25 +71,94 @@
                                                         <action selector="didTouchedOnRepostButton:" destination="fRm-OS-v1T" eventType="touchUpInside" id="hfu-ed-SyS"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5V-XV-LXq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="599" height="140"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" image="ic_play">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="didTouchedOnPlayButton:" destination="fRm-OS-v1T" eventType="touchUpInside" id="Ve7-ZX-vZT"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" red="0.050980392159999999" green="0.81568627449999997" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="d5V-XV-LXq" firstAttribute="centerY" secondItem="edm-BT-hPV" secondAttribute="centerY" id="1Ie-2T-jfP"/>
                                             <constraint firstAttribute="bottom" secondItem="gX5-EC-9MI" secondAttribute="bottom" constant="5" id="1oX-jg-ZP5"/>
                                             <constraint firstItem="vci-32-Kwb" firstAttribute="leading" secondItem="gX5-EC-9MI" secondAttribute="trailing" constant="5" id="8fW-88-QIm"/>
                                             <constraint firstItem="edm-BT-hPV" firstAttribute="top" secondItem="fRm-OS-v1T" secondAttribute="top" id="Bj3-fJ-LGU"/>
                                             <constraint firstAttribute="trailing" secondItem="vci-32-Kwb" secondAttribute="trailing" constant="5" id="EW5-zR-GAU"/>
                                             <constraint firstItem="gX5-EC-9MI" firstAttribute="leading" secondItem="fRm-OS-v1T" secondAttribute="leading" constant="5" id="Lkt-rF-FzM"/>
+                                            <constraint firstItem="d5V-XV-LXq" firstAttribute="height" secondItem="edm-BT-hPV" secondAttribute="height" id="M5T-5t-kNx"/>
                                             <constraint firstAttribute="trailing" secondItem="edm-BT-hPV" secondAttribute="trailing" id="TbS-YQ-8QA"/>
                                             <constraint firstAttribute="bottom" secondItem="vci-32-Kwb" secondAttribute="bottom" constant="5" id="VCM-iN-0WG"/>
                                             <constraint firstItem="edm-BT-hPV" firstAttribute="leading" secondItem="fRm-OS-v1T" secondAttribute="leading" id="aEH-5M-yks"/>
+                                            <constraint firstItem="d5V-XV-LXq" firstAttribute="centerX" secondItem="edm-BT-hPV" secondAttribute="centerX" id="cAZ-Ig-LBA"/>
+                                            <constraint firstItem="d5V-XV-LXq" firstAttribute="width" secondItem="edm-BT-hPV" secondAttribute="width" id="kC5-GF-odS"/>
                                             <constraint firstItem="gX5-EC-9MI" firstAttribute="top" secondItem="edm-BT-hPV" secondAttribute="bottom" constant="5" id="qqV-86-K90"/>
                                         </constraints>
                                         <size key="customSize" width="599" height="190"/>
                                         <connections>
                                             <outlet property="captionLabel" destination="gX5-EC-9MI" id="OVf-Bz-X0k"/>
                                             <outlet property="photoImageView" destination="edm-BT-hPV" id="GU3-wv-agv"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCollectionViewCell" id="YnA-t1-eEg" customClass="MediaCollectionViewCell">
+                                        <rect key="frame" x="0.5" y="250" width="599" height="190"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="599" height="190"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JWQ-07-sUX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="599" height="140"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7S-ea-kum">
+                                                    <rect key="frame" x="5" y="145" width="544" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="ZDZ-rS-cgA"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4q-Rs-JvE">
+                                                    <rect key="frame" x="554" y="145" width="40" height="40"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="e0K-AU-5hd"/>
+                                                        <constraint firstAttribute="height" constant="40" id="reM-ju-jKn"/>
+                                                    </constraints>
+                                                    <state key="normal" image="retweet_line">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="didTouchedOnRepostButton:" destination="YnA-t1-eEg" eventType="touchUpInside" id="Tme-4U-v1b"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.050980392159999999" green="0.81568627449999997" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="JWQ-07-sUX" secondAttribute="trailing" id="4Bj-fg-goF"/>
+                                            <constraint firstAttribute="bottom" secondItem="w7S-ea-kum" secondAttribute="bottom" constant="5" id="JOa-Xn-edv"/>
+                                            <constraint firstItem="i4q-Rs-JvE" firstAttribute="leading" secondItem="w7S-ea-kum" secondAttribute="trailing" constant="5" id="c8O-cl-RSw"/>
+                                            <constraint firstItem="w7S-ea-kum" firstAttribute="leading" secondItem="YnA-t1-eEg" secondAttribute="leading" constant="5" id="hEH-Oz-Nxl"/>
+                                            <constraint firstAttribute="bottom" secondItem="i4q-Rs-JvE" secondAttribute="bottom" constant="5" id="ipd-s5-E2Z"/>
+                                            <constraint firstItem="JWQ-07-sUX" firstAttribute="top" secondItem="YnA-t1-eEg" secondAttribute="top" id="jVV-cn-d13"/>
+                                            <constraint firstAttribute="trailing" secondItem="i4q-Rs-JvE" secondAttribute="trailing" constant="5" id="n1Z-hI-5gb"/>
+                                            <constraint firstItem="w7S-ea-kum" firstAttribute="top" secondItem="JWQ-07-sUX" secondAttribute="bottom" constant="5" id="w9b-kM-sZ0"/>
+                                            <constraint firstItem="JWQ-07-sUX" firstAttribute="leading" secondItem="YnA-t1-eEg" secondAttribute="leading" id="zeZ-xs-6Xe"/>
+                                        </constraints>
+                                        <size key="customSize" width="599" height="190"/>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="w7S-ea-kum" id="Hnr-fG-aGS"/>
+                                            <outlet property="photoImageView" destination="JWQ-07-sUX" id="vKY-bV-Uny"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -184,6 +253,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_play" width="64" height="64"/>
         <image name="instagram" width="52" height="52"/>
         <image name="retweet_line" width="96" height="96"/>
     </resources>

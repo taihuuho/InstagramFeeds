@@ -9,7 +9,7 @@
  IMPORT
  =============================================================================*/
 #import "PopularFeedsViewController.h"
-#import <InstagramKit/InstagramEngine.h>
+#import <InstagramKit/InstagramKit.h>
 #import <SVPullToRefresh/SVPullToRefresh.h>
 #import <AMScrollingNavbar/UIViewController+ScrollingNavbar.h>
 
@@ -135,7 +135,13 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    MediaCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MediaCollectionViewCell" forIndexPath:indexPath];
+    InstagramMedia *media = self.medias[indexPath.section];
+    NSString *identifier = @"PhotoCollectionViewCell";
+    if (media.isVideo) {
+        identifier = @"VideoCollectionViewCell";
+    }
+    
+    MediaCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     [cell displayMedia:self.medias[indexPath.section]];
     
     return cell;
@@ -156,7 +162,7 @@
 
 #pragma mark UICollectionFlowLayoutDelegate
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(collectionView.frame.size.width, collectionView.frame.size.width + 50); // 5 top padding + 40 height + 5 bottom padding
+    return CGSizeMake(collectionView.frame.size.width, collectionView.frame.size.width + 50); // 5 top padding + 40 height of caption + 5 bottom padding
 }
 
 #pragma mark IBActions

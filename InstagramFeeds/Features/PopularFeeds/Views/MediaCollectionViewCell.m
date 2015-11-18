@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *captionLabel;
 
+- (IBAction)didTouchedOnPlayButton:(UIButton *)sender;
 @end
 
 @implementation MediaCollectionViewCell
@@ -31,6 +32,10 @@
     [self.photoImageView sd_setImageWithURL:media.standardResolutionImageURL completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
     }];
     self.captionLabel.text = media.caption.text;
+    
+    if (media.isVideo) {
+        NSLog(@"video");
+    }
 }
 
 - (IBAction)didTouchedOnRepostButton:(UIButton *)sender {
@@ -69,5 +74,7 @@
         [appDelegate.window.rootViewController presentViewController:alert animated:YES completion:nil];
     }
     
+}
+- (IBAction)didTouchedOnPlayButton:(UIButton *)sender {
 }
 @end
